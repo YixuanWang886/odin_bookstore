@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>My book store</h1>
+      <div class="nav_buttons">
+        <button class="nav_button" onclick="addBook()">Add book</button>
+        <button class="nav_button" onclick="closeForm()">Login</button>
+      </div>
+    </div>
+    <div id="main">
+      <div id="form_container">
+        <form id="add-book">
+          <h2>Add book</h2>
+          <button id="close" onclick="remove_form(event)">X</button>
+          <label for="author">Author</label>
+          <input type="text" id="author" name="author" required />
+
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required />
+
+          <label for="page">Page</label>
+          <input type="number" id="page" name="page" required />
+
+          <label for="read">Have you read this book?</label>
+
+          <label class="switch">
+            <input type="checkbox" id="read" name="read" />
+            <span class="slider round"></span>
+          </label>
+
+          <button id="submit" type="submit" onclick="create_book(event)">
+            submit
+          </button>
+        </form>
+      </div>
+      <div id="book_container"></div>
+    </div>
+  </body>
+</html>
